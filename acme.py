@@ -2,12 +2,14 @@ import random
 
 
 class Product():
-    def __init__(self, name, price=10, weight=20, flammability=0.5, identifier=None):
+    def __init__(
+                self, name,
+                price=10, weight=20, flammability=0.5, identifier=None):
         self.name = name
         self.price = price
         self.weight = weight
         self.flammability = flammability
-        if identifier == None:
+        if identifier is None:
             self.identifier = random.randint(1000000, 9999999)
 
     def stealability(self):
@@ -43,7 +45,6 @@ class BoxingGlove(Product):
             }
         ratio_breakpoints = [0, 5, 15]
         return message_options[get_message_level(ratio, ratio_breakpoints)]
-
 
 
 def get_message_level(ratio, ratio_breakpoints):

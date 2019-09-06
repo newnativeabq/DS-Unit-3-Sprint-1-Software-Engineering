@@ -16,26 +16,43 @@ class AcmeProductTests(unittest.TestCase):
         self.assertEqual(prod.flammability, 0.5)
 
     def test_range_stealability(self):
-        test_price = random.randrange(0,100)
+        test_price = random.randrange(0, 100)
         test_weight_high = test_price / 3
         test_weight_low = test_price * 3
-
-        prod_high = Product(name='Test Product', price=test_price, weight=test_weight_high)
-        prod_low = Product(name='Test Product', price=test_price, weight=test_weight_low)
-
+        prod_high = Product(
+                            name='Test Product',
+                            price=test_price,
+                            weight=test_weight_high
+                            )
+        prod_low = Product(
+                            name='Test Product',
+                            price=test_price,
+                            weight=test_weight_low
+                            )
         self.assertEqual(prod_high.stealability(), "Very stealable!")
         self.assertEqual(prod_low.stealability(), "Kinda stealable.")
 
     def test_range_explode(self):
-        test_flammability = random.uniform(1,2.5)
+        test_flammability = random.uniform(1, 2.5)
         test_weight_high = 1000
         test_weight_medium = 10
         test_weight_low = test_flammability
 
-        prod_high = Product('test_high', flammability=test_flammability, weight=test_weight_high)
-        prod_medium = Product('test_high', flammability=test_flammability, weight=test_weight_medium)
-        prod_low = Product('test_high', flammability=test_flammability, weight=test_weight_low)
-
+        prod_high = Product(
+                            'test_high',
+                            flammability=test_flammability,
+                            weight=test_weight_high
+                            )
+        prod_medium = Product(
+                            'test_high',
+                            flammability=test_flammability,
+                            weight=test_weight_medium
+                            )
+        prod_low = Product(
+                            'test_high',
+                            flammability=test_flammability,
+                            weight=test_weight_low
+                            )
         self.assertEqual(prod_high.explode(), "...BABOOM!!",)
         self.assertEqual(prod_medium.explode(), "...boom!")
         self.assertEqual(prod_low.explode(), "...fizzle.")
