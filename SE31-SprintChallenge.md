@@ -98,7 +98,7 @@ Make a subclass of `Product` named `BoxingGlove` that does the following:
 - Add a `punch` method that returns "That tickles." if the weight is below 5,
   "Hey that hurt!" if the weight is greater or equal to 5 but less than 15, and
   "OUCH!" otherwise
-  
+
 Example test run:
 
 ```python
@@ -178,7 +178,7 @@ The last lines let you test by running `python acme_report.py`. You should see
 output like:
 
 ```
-$ python acme_report.py 
+$ python acme_report.py
 ACME CORPORATION OFFICIAL INVENTORY REPORT
 Unique product names: 19
 Average price: 56.8
@@ -215,7 +215,7 @@ if __name__ == '__main__':
 
 If you run the tests you should see output like:
 ```
-$ python acme_test.py 
+$ python acme_test.py
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
@@ -234,7 +234,7 @@ Complete the following:
   length 30, and `test_legal_names` which checks that the generated names for a
   default batch of products are all valid possible names to generate (adjective,
   space, noun, from the lists of possible words)
-  
+
 *Hint* - `test_legal_names` is the trickiest of these, but may not be as bad as
 you think. Check out `assertIn` from `unittest`, and remember that Python is
 pretty handy at string processing. But if you get stuck, move on and revisit.
@@ -244,12 +244,12 @@ Note that `inventory_report()` is pretty tricky to test, because it doesn't
 challenge, don't worry about testing it - but as a stretch goal/something to
 think about, it's a good ponderer.
 
-**It'd be easier to have every function return an object and pass to a renderer instead of printing direclty.  There, render(object) could print(object).**
+**It'd be easier to have every function return an object and pass to a renderer instead of printing direclty.  There, render(object) could print(object).  The tests would intercept the object pre-render.**
 
 ### Part 6 - Style it Up
 
 If you did the earlier parts in an editor that was linting your code (warning
-you about violations of [PEP8 style](https://pep8.org/)) and you listened to it,
+you about violations of [PEP8 style]) and you listened to it,
 you're already done!
 
 If not, go back and fix things! If you don't have a built-in tool for checking,
@@ -266,11 +266,16 @@ career here, you'll have to answer the following:
 - What, in your opinion, is an important part of code reviews? That is, what is
   something you pay attention to when you review code, and that you appreciate
   when others do the same for your code?
+
 - We have an awful lot of computers here, and it gets pretty confusing with
   slightly different things running on all of them. How could containers help us
   improve this situation?
 
 Answer both of these questions (baseline ~5 sentences) here in text.
+
+**Code reviews help programmers build standards, read code faster, and develop better-engineered end-products.  When I review code, I pay attention to naming conventions and the ability to follow logic and data through the program.  I appreciate when people suggest better ways to do something, or notice that the way I wrote a piece is esoteric and unclear - meaning I won't understand it muyself in the future**
+
+**Containers allow program environments to be virtualized, so they can be deployed somewhat indpendently of the host operating system.  In our case, we can run anything on everything will a little work and adoption of a common core-os. IT will love us for it, maybe.**
 
 ### Part 8 - Turn it in!
 
