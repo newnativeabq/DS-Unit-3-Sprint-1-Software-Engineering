@@ -244,6 +244,8 @@ Note that `inventory_report()` is pretty tricky to test, because it doesn't
 challenge, don't worry about testing it - but as a stretch goal/something to
 think about, it's a good ponderer.
 
+**It'd be easier to have every function return an object and pass to a renderer instead of printing direclty.  There, render(object) could print(object).**
+
 ### Part 6 - Style it Up
 
 If you did the earlier parts in an editor that was linting your code (warning
