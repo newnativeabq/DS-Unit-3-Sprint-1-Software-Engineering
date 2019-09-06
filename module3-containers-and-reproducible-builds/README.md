@@ -1,48 +1,19 @@
-# Containers and Reproducible Builds
+# LSDS Object Oriented Programming Review Assignment
 
-## Learning Objectives
+Inside the `football` directory, you will find several files, including a blank `__init__.py`. Don't worry about that one right now. These files together can model several aspects of a football season including a player's statisctics, an individual football game, and a season.
 
-- Launch Docker containers and access/execute programs on them
-- Create/customize a Dockerfile to build a basic custom container
+As is, these modules are fully functional (well, they run without errors). You can generate a season report by running `season.py`, and you can run the tests using `football_test.py`.
 
-## Before Lecture
+That being said...
 
-- If you have Linux, MacOS Sierra or newer or Windows 10 Pro, install
-  [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- If you have older MacOS, Windows 10 Home, or older Windows, install
-  [Docker Toolbox](https://docs.docker.com/toolbox/overview/)
-- If you're unable to locally install Docker, sign up for an account at
-  [Docker Hub](https://hub.docker.com/)
+Each file (`game.py`, `players.py`, `season.py`, `possible_values.py`, and `football_test.py`) contains at least one `TODO` inside a comment. That is where you can add things and try them out to see if you're understanding how this is all done.
 
-## Live Lecture Task
+It makes the most sense to begin with `players.py` and `game.py` because they explain the class foundations for the rest of the files (`game.py` more so--since it is used in `season.py`).
 
-Working with Docker is tricky - we'll step through a complete workflow live, and
-answer questions that arise. In-depth debugging should be done 1:1 with PMs
-after lecture.
+To run anything here or in your own, edited version, clone the repo and navigate to the `football` directory in your terminal.
+If you would like to run the tests or generate a season report, run `python filename.py` or `python3 filename.py` depending on your configuration with the appropriate choice of `football_test.py` or `season.py`.
+If you would like to interactively create instances of the `Player`, `Quarterback`, `Game`, or your own, added, classes and run different methods on them, run `python` or `python3` in terminal and `import` the appropriate module (file name without the `.py`) on the python shell (when you see `>>>`, for example).
 
-## Assignment
 
-Install and run code from your `lambdata` package inside a Docker container.
-This is a relatively simple baseline to support the variety of local workflows
-students will have.
-
-## Resources and Stretch Goals
-
-If your local installation isn't working, you can use the [Play with Docker
-Classroom](https://training.play-with-docker.com/) - a Docker Hub account will
-let you try Docker and spin up containers from your browser. They are
-*temporary* (will go away when you leave the page), and editing the `Dockerfile`
-will be a bit cumbersome, but we'll show how to in class.
-
-The [official Docker documentation](https://docs.docker.com/) is extremely
-thorough and worth checking out. For a particular stretch goal, explore
-[Docker Compose](https://docs.docker.com/compose/), a powerful approach to
-combining containers (e.g. you can run a local webapp and database together).
-
-Explore [Hands-On Machine Learning in Docker](https://github.com/ageron/handson-ml/tree/master/docker),
-a prebuilt Docker container with all sorts of DS/ML goodies. By using Docker you
-can get up and running with sophisticated systems remarkably quickly.
-
-Want to better understand the difference between VMs ("heavy") and containers
-("light")? [This blog post](https://www.backblaze.com/blog/vm-vs-containers/)
-highlights and summarizes the benefits and use cases of both.
+_Originally created by Joanne Jordan for Lambda School's Data Science program_
+https://github.com/jojordan3/LSDS-OOP-assignment
